@@ -32,26 +32,8 @@
     </style>
     <script type="text/javascript">
     $(document).ready(function() {
-        getLatestRelease();
+       window.location.href += "/src";
     });
-
-    function getLatestRelease() {
-        $.getJSON("https://api.github.com/repos/pablopunk/chronocube/tags").done(function (json) {
-            var release = json[0];
-            var tag = release.name;
-            var url = getFileName(tag);
-            $('#download').find('span').text(url[0]);
-            $('#download').attr("href", url[1]);
-        });    
-    }
-
-    function getFileName(tag) {
-        var nav = window.navigator.appVersion;
-        var url = 'https://github.com/pablopunk/chronocube/releases/download/'+tag+'/';
-        if (nav.indexOf('Mac')>-1) return [' Download for Mac' , url+'Chronocube-Mac.dmg'];
-        if (nav.indexOf('Windows')>-1) return [' Download for Windows', url+'Chronocube-Windows-Installer.exe'];
-        return [' Download' , 'https://github.com/pablopunk/chronocube/releases/latest']; // default
-    }
     </script>
 </head>
 <body>
