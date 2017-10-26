@@ -3,7 +3,7 @@ function Layout() {
 	this.smallChrono = "130pt";
 	this.currentScrambleForHoverTime = "";
 	this.historyDiv = document.getElementById('history')
-	this.theme = 'bright'
+	this.theme = 'dark'
 	this.newTimeButtonHTML = '<tr onclick="MainLayout.displayNewTimeText()"><td colspan="3" style="cursor:pointer" ><i id="add-button" class="icon ion-ios-plus-outline"></i> New solve</td></tr>'
 	this.newTimeTextHTML = '<tr><td colspan="3"><input type="text" id="newTimeText" onkeyup="MainLayout.newTime(event, this.value)"> <i id="del-button" class="icon ion-ios-close-outline minus" onclick="MainLayout.hideNewTimeText()"></i></td></tr>'
 	this.hideTimerWhileSolving=0
